@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Hanau Header</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cooper+Black&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 2px solid black;
+      background: #f7f7f7;
+      font-size: 2rem;
+    }
+
+    .left {
+      font-family: 'Cooper Black', serif;
+      font-weight: normal;
+    }
+
+    .date-separator {
+      font-family: 'Arial Black', sans-serif;
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      font-family: 'Arial Black', sans-serif;
+    }
+
+    .counter {
+      display: inline-flex;
+      background: black;
+      color: white;
+      padding: 4px 6px;
+      margin-right: 8px;
+      font-size: 1.5rem;
+    }
+
+    .counter span {
+      margin: 0 2px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="left">
+    SEIT <span class="date-separator">19|02|20</span> HANAU
+  </div>
+  <div class="right">
+    <div class="counter" id="day-counter"></div>
+    TAGE
+  </div>
+</div>
+
+<script>
+  const startDate = new Date("2020-02-19");
+  const today = new Date();
+  const diffTime = today - startDate;
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+  const counterEl = document.getElementById("day-counter");
+  const digits = diffDays.toString().padStart(5, "0");
+
+  counterEl.innerHTML = digits.split('').map(d => `<span>${d}</span>`).join('');
+</script>
+
+</body>
+</html>
