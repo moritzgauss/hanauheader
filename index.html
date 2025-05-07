@@ -3,75 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <title>Hanau Header</title>
+  <link href="styles.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cooper+Black&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      border-bottom: 2px solid black;
-      background: #f7f7f7;
-      font-size: 2rem;
-    }
-
-    .left {
-      font-family: 'Cooper Black', serif;
-      font-weight: normal;
-    }
-
-    .date-separator {
-      font-family: 'Arial Black', sans-serif;
-    }
-
-    .right {
-      display: flex;
-      align-items: center;
-      font-family: 'Arial Black', sans-serif;
-    }
-
-    .counter {
-      display: inline-flex;
-      background: black;
-      color: white;
-      padding: 4px 6px;
-      margin-right: 8px;
-      font-size: 1.5rem;
-    }
-
-    .counter span {
-      margin: 0 2px;
-    }
-  </style>
 </head>
 <body>
 
-<div class="header">
+<header class="header">
   <div class="left">
-    SEIT <span class="date-separator">19|02|20</span> HANAU
+    <img src="seit-190220-hanau.svg" alt="SEIT 19|02|20 HANAU" class="logo">
   </div>
   <div class="right">
-    <div class="counter" id="day-counter"></div>
-    TAGE
+    <span class="counter" id="day-counter"></span>
+    <span class="counter-text">TAGE</span>
   </div>
-</div>
+</header>
 
-<script>
-  const startDate = new Date("2020-02-19");
-  const today = new Date();
-  const diffTime = today - startDate;
-  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-  const counterEl = document.getElementById("day-counter");
-  const digits = diffDays.toString().padStart(5, "0");
+<main class="grid">
+  <div class="box"><img src="seit-hanau-landingpage-1-A.PNG" alt=""></div>
+  <div class="box"><img src="seit-hanau-landingpage-01-A.PNG" alt=""></div>
+  <div class="box"><img src="seit-hanau-landingpage-1-B.PNG" alt=""></div>
+  <div class="box"><img src="seit-hanau-landingpage-01-B.PNG" alt=""></div>
+  <div class="box"><img src="seit-hanau-landingpage-2-A.PNG" alt=""></div>
+  <div class="box"><img src="seit-hanau-landingpage-02-A.PNG" alt=""></div>
+  <div class="box"><img src="seit-hanau-landingpage-2-B.PNG" alt=""></div>
+  <div class="box"><img src="seit-hanau-landingpage-02-B.PNG" alt=""></div>
+  <div class="box"><img src="seit-hanau-landingpage-03-A.PNG" alt=""></div>
+  <div class="box"><img src="seit-hanau-landingpage-3-B.PNG" alt=""></div>
+  <div class="box"><img src="seit-hanau-landingpage-03-B.PNG" alt=""></div>
+  <div class="box"><img src="seit-hanau-landingpage-3.PNG" alt=""></div>
+</main>
 
-  counterEl.innerHTML = digits.split('').map(d => `<span>${d}</span>`).join('');
-</script>
+<footer class="footer">
+  <div class="footer-links">
+    <a href="#">Kontakt</a>
+    <a href="#">Impressum</a>
+    <a href="#">Datenschutz</a>
+  </div>
+</footer>
 
+<script src="script.js"></script>
 </body>
 </html>

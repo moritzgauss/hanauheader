@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'PlakatGrotesk-Bold';
+    src: url('PlakatGrotesk-Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'PlakatGrotesk-Regular';
+    src: url('PlakatGrotesk-Regular.woff') format('woff');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+    padding-right: 24px;
+  border-bottom: 2px solid black;
+  background: #f7f7f7;
+  font-size: 2rem;
+  z-index: 1000;
+}
+
+.left {
+  font-family: 'Cooper Black', serif;
+}
+
+.left .logo {
+  height: 100px;
+  width: auto;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  font-family: 'PlakatGrotesk-Bold', sans-serif;
+  gap: 8px;
+}
+
+.counter {
+  display: inline-flex;
+  gap: 4px;
+  font-size: 1.2em;
+}
+
+.counter span {
+  background: black;
+  border-radius: 6px;
+  color: white;
+  padding-top: 8px;
+    padding-bottom: 4px;
+  font-family: 'PlakatGrotesk-Regular', sans-serif;
+  min-width: 1.2em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.2em;
+  line-height: 1.2; 
+}
+
+.counter-text {
+    padding-top: 6px;
+    font-size: 1.2em;
+  }
+  
+
+main.grid {
+  margin-top: 140px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  width: 100%;
+}
+
+.box {
+  aspect-ratio: 2/3;
+  overflow: hidden;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.footer {
+  background: black;
+  padding: 60px 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-family: 'PlakatGrotesk-Regular', sans-serif;
+  font-size: 3em;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding-left: 10px;
+    padding-right: 20px;
+    height: 70px;
+  }
+  
+  main.grid {
+    margin-top: 70px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .left .logo {
+    height: 20px;
+  }
+
+  .right {
+    gap: 4px;
+  }
+
+  .counter {
+    display: inline-flex;
+    gap: 2px;
+    font-size: 0.6em;
+  }
+  
+  .counter span {
+    border-radius: 4px;
+    min-width: 1em;
+  }
+  
+  .counter-text {
+    padding-top: 2px;
+      font-size: 0.6em;
+    }
+
+    .footer {
+        padding: 20px 10px;
+      }
+      
+      .footer-links a {
+        font-size: 1.6em;
+      }
+}
