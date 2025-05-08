@@ -83,7 +83,7 @@ body {
   align-items: center;
   gap: 14px;
   font-family: 'PlakatGrotesk-Bold', serif;
-  font-size: 4em;
+  font-size: 2em;
 }
 
 .date-group {
@@ -214,7 +214,6 @@ main.grid {
     }
 
   .logo-text {
-    font-size: 2em;
     gap: 4px;
   }
 
