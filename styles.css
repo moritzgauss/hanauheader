@@ -73,7 +73,7 @@ body {
 
 .counter-text {
     padding-top: 6px;
-    padding-left: 3px;
+    padding-left: 1px;
     font-family: 'PlakatGrotesk-Bold', serif;
     font-size: 1.2em;
   }
@@ -209,7 +209,7 @@ main.grid {
   
   .counter-text {
     padding-top: 4px;
-    padding-left: 2px;
+    padding-left: 0.5px;
     font-size: 0.6em;
     }
 
