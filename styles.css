@@ -29,7 +29,6 @@ body {
     padding-right: 24px;
   border-bottom: 2px solid black;
   background: #f7f7f7;
-  font-size: 2rem;
   z-index: 1000;
 }
 
@@ -83,7 +82,7 @@ body {
   align-items: center;
   gap: 14px;
   font-family: 'PlakatGrotesk-Bold', serif;
-  font-size: 64px;
+  font-size: 4em;
 }
 
 .date-group {
@@ -188,10 +187,6 @@ main.grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .left .logo {
-    height: 20px;
-  }
-
   .right {
     gap: 4px;
   }
@@ -214,7 +209,7 @@ main.grid {
     }
 
   .logo-text {
-    font-size: 32px;
+    font-size: 2em;
     gap: 4px;
   }
 
@@ -224,7 +219,7 @@ main.grid {
 
   .separator {
       width: 3px;
-      height: 26px;
+      height: 24px;
       margin-bottom: 4px;
   }
 
