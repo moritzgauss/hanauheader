@@ -21,7 +21,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 140px;
+  height: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,8 +38,8 @@ body {
 }
 
 .left .logo {
-  height: auto;
-  width: 100%;
+  height: 100px;
+  width: auto;
 }
 
 .right {
@@ -73,30 +73,89 @@ body {
 
 .counter-text {
     padding-top: 6px;
+    padding-left: 6px;
+    font-family: 'PlakatGrotesk-Bold', serif;
     font-size: 1.2em;
   }
   
+.logo-text {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: 'PlakatGrotesk-Bold', serif;
+  font-size: 64px;
+}
+
+.date-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.separator {
+  display: inline-block;
+  width: 5px;
+  height: 54px;
+  margin-bottom: 4px;
+  background: black;
+}
 
 main.grid {
-  margin-top: 140px;
+  margin-top: 120px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
   width: 100%;
 }
 
-.box {
+.card-container {
   aspect-ratio: 2/3;
   overflow: hidden;
   border-bottom: 1px solid black;
   border-left: 1px solid black;
+  perspective: 1000px;
 }
 
-.box img {
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-face img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+}
+
+.card-front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  transform: rotateY(180deg);
 }
 
 .footer {
@@ -129,6 +188,10 @@ main.grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .left .logo {
+    height: 20px;
+  }
+
   .right {
     gap: 4px;
   }
@@ -145,15 +208,32 @@ main.grid {
   }
   
   .counter-text {
-    padding-top: 2px;
-      font-size: 0.6em;
+    padding-top: 4px;
+    padding-left: 4px;
+    font-size: 0.6em;
     }
+
+  .logo-text {
+    font-size: 32px;
+    gap: 4px;
+  }
+
+  .date-group {
+    gap: 2px;
+  }
+
+  .separator {
+      width: 3px;
+      height: 26px;
+      margin-bottom: 4px;
+  }
 
     .footer {
         padding: 20px 10px;
       }
       
       .footer-links a {
+        gap: 10px;
         font-size: 1.6em;
       }
 }
